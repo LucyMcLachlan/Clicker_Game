@@ -1,7 +1,7 @@
 void intro() {
   background(blue);
   fill(255);
-  rect(300, 500, 200, 80);
+  rect(300, 500, 200, 80,10);
   fill(0);
   textSize(30);
   text("START",400,540);
