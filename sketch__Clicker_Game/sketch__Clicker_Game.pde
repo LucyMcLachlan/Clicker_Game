@@ -44,4 +44,6 @@ void draw() {
   } else {
     println("Error: Mode =" + mode);
   }
+  
+  r=d/2;
 }

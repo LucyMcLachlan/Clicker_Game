@@ -36,8 +36,8 @@ void gameClicks() {
     d=random(60, 150);
     vx=random(-5, 5);
     vy=random(-5, 5);
-    x=random(r+25, width-r-25);
-    y=random(r+25, height-r-25);
+    x=random(r+10, width-r-10);
+    y=random(r, height-r);
   } else if (mouseX>50&&mouseX<100&&mouseY>50&&mouseY<100) {
     fill(white);
     stroke(black);
