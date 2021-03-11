@@ -33,9 +33,9 @@ void game() {
 void gameClicks() {
   if (dist(mouseX, mouseY, x, y)<d/2) {
     score=score+1;
-    d=random(60, 150);
-    vx=random(-5, 5);
-    vy=random(-5, 5);
+    d=targetSize;
+    if(vx<0){vx=vx-0.5;}else{vx=vx+0.5;}
+    if(vy<0){vy=vy-0.5;}else{vy=vy+1;}
     x=random(r+10, width-r-10);
     y=random(r, height-r);
   } else if (mouseX>50&&mouseX<100&&mouseY>50&&mouseY<100) {

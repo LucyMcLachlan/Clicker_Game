@@ -9,6 +9,9 @@ float x,y,d,r;
 float vx,vy;
 int score,lives;
 int highScore;
+float targetSize;
+//slider variables
+float sliderY;
 //color pallette
 color blue =#3B8686;
 color white =#FFFFFF;
@@ -21,15 +24,19 @@ void setup() {
   textAlign(CENTER,CENTER);
   
   //target initialization
+  targetSize = 75;
   x=width/2;
   y=height/2;
-  d=random(60,150);
+  d=targetSize;
   r=d/2;
-  vx = random(-5,5);
-  vy = random(-5,5);
+  vx = random(-1,1);
+  vy = random(-1,1);
+
   
   score=0;
   lives=3;
+  
+  sliderY=300;
 }
 
 void draw() {
@@ -41,6 +48,8 @@ void draw() {
     game();
   } else  if (mode == GAMEOVER) {
     gameOver();
+  } else if (mode == OPTIONS){
+    options();
   } else {
     println("Error: Mode =" + mode);
   }

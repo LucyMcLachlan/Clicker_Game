@@ -7,5 +7,12 @@ void mouseReleased(){
     gameClicks();
   } else  if (mode == GAMEOVER) {
     gameOverClicks();
+  } else if(mode == OPTIONS){
+    optionClicks();
   }
+  
+}
+
+void mouseDragged(){
+  if(mode== OPTIONS){optDragged();}
 }
